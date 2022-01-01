@@ -84,7 +84,7 @@ export default extravios
 
 export async function getServerSideProps() {
   const res = await fetch(process.env.MI_CIUDAD_API_URL!)
-  const extravios = await res.json()
+  const extravios: Extravio[] = await res.json()
 
   if (!extravios) {
     return {
