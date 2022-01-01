@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import type { NextPage } from 'next'
+
 import Head from 'next/head'
 
 const Home: NextPage = () => {
@@ -67,12 +69,11 @@ const Home: NextPage = () => {
                         ></path>
                       </svg>
                     </a>
-                    <a
-                      href="/extravios"
-                      className="flex items-center justify-center mr-10 text-base text-gray-700 text-opacity-90 font-medium tracking-tight hover:text-cool-gray-600 transition duration-150 ease-in-out"
-                    >
-                      Extravíos
-                    </a>
+                    <Link href="/extravios">
+                      <a className="flex items-center justify-center mr-10 text-base text-gray-700 text-opacity-90 font-medium tracking-tight hover:text-cool-gray-600 transition duration-150 ease-in-out">
+                        Extravíos
+                      </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center">
