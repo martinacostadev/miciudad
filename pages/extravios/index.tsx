@@ -83,7 +83,7 @@ function extravios({ extravios }: IProps) {
 export default extravios
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:8080/api/v1/extravios`)
+  const res = await fetch(process.env.MI_CIUDAD_API_URL!)
   const extravios = await res.json()
 
   if (!extravios) {
